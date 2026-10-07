@@ -58,7 +58,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         h.tvPrice.setText(fmt.format(food.getPrice()) + "đ");
         h.tvFavorite.setText(food.isFavorite() ? "❤️" : "🤍");
 
-        // Staggered entrance
+        // Staggered entrance animation
         h.itemView.setAlpha(0f);
         h.itemView.setTranslationY(50f);
         ObjectAnimator fade  = ObjectAnimator.ofFloat(h.itemView, "alpha", 0f, 1f);
@@ -68,7 +68,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         fade.setStartDelay(position * 60L);
         slide.setStartDelay(position * 60L);
         slide.setInterpolator(new OvershootInterpolator(0.8f));
-        new AnimatorSet() {{ playTogether(fade, slide); start(); }};
+        AnimatorSet entranceSet = new AnimatorSet();
+        entranceSet.playTogether(fade, slide);
+        entranceSet.start();
 
         // Click → detail
         h.itemView.setOnClickListener(v -> {
@@ -104,17 +106,23 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     private void animateTap(View v) {
         ObjectAnimator sx = ObjectAnimator.ofFloat(v, "scaleX", 1f, 0.96f, 1f);
         ObjectAnimator sy = ObjectAnimator.ofFloat(v, "scaleY", 1f, 0.96f, 1f);
-        sx.setDuration(200); sy.setDuration(200);
-        new AnimatorSet() {{ playTogether(sx, sy); start(); }};
+        sx.setDuration(200);
+        sy.setDuration(200);
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(sx, sy);
+        set.start();
     }
 
     private void animateScaleBounce(View v) {
         ObjectAnimator sx = ObjectAnimator.ofFloat(v, "scaleX", 1f, 1.4f, 1f);
         ObjectAnimator sy = ObjectAnimator.ofFloat(v, "scaleY", 1f, 1.4f, 1f);
-        sx.setDuration(300); sy.setDuration(300);
+        sx.setDuration(300);
+        sy.setDuration(300);
         sx.setInterpolator(new OvershootInterpolator(2f));
         sy.setInterpolator(new OvershootInterpolator(2f));
-        new AnimatorSet() {{ playTogether(sx, sy); start(); }};
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(sx, sy);
+        set.start();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

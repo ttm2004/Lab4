@@ -84,17 +84,17 @@ public class FoodDetailActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         });
 
-        // Quantity
+        // Quantity controls
         tvQuantity = findViewById(R.id.tv_quantity);
         TextView btnDec = findViewById(R.id.btn_decrease);
         TextView btnInc = findViewById(R.id.btn_increase);
 
         btnDec.setOnClickListener(v -> {
-            if (quantity > 1) { quantity--; refreshQuantity(tvQuantity); }
+            if (quantity > 1) { quantity--; refreshQuantity(); }
         });
         btnInc.setOnClickListener(v -> {
             quantity++;
-            refreshQuantity(tvQuantity);
+            refreshQuantity();
         });
 
         // Add to cart
@@ -108,9 +108,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         });
     }
 
-    private void refreshQuantity(TextView tvQty) {
-        tvQty.setText(String.valueOf(quantity));
-        animateScaleBounce(tvQty);
+    private void refreshQuantity() {
+        tvQuantity.setText(String.valueOf(quantity));
+        animateScaleBounce(tvQuantity);
         updateTotalPrice();
     }
 
@@ -123,23 +123,23 @@ public class FoodDetailActivity extends AppCompatActivity {
     }
 
     private void playEntranceAnimation() {
-        // Slide up cards
         int delay = 0;
         for (int id : new int[]{R.id.tv_food_name, R.id.tv_description}) {
             View v = findViewById(id);
-            if (v != null) {
-                v.setAlpha(0f);
-                v.setTranslationY(40f);
-                ObjectAnimator fade  = ObjectAnimator.ofFloat(v, "alpha", 0f, 1f);
-                ObjectAnimator slide = ObjectAnimator.ofFloat(v, "translationY", 40f, 0f);
-                fade.setDuration(400);
-                slide.setDuration(400);
-                fade.setStartDelay(delay);
-                slide.setStartDelay(delay);
-                slide.setInterpolator(new OvershootInterpolator(1f));
-                new AnimatorSet() {{ playTogether(fade, slide); start(); }};
-                delay += 100;
-            }
+            if (v == null) continue;
+            v.setAlpha(0f);
+            v.setTranslationY(40f);
+            ObjectAnimator fade  = ObjectAnimator.ofFloat(v, "alpha", 0f, 1f);
+            ObjectAnimator slide = ObjectAnimator.ofFloat(v, "translationY", 40f, 0f);
+            fade.setDuration(400);
+            slide.setDuration(400);
+            fade.setStartDelay(delay);
+            slide.setStartDelay(delay);
+            slide.setInterpolator(new OvershootInterpolator(1f));
+            AnimatorSet set = new AnimatorSet();
+            set.playTogether(fade, slide);
+            set.start();
+            delay += 100;
         }
     }
 
@@ -150,7 +150,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         sy.setDuration(350);
         sx.setInterpolator(new OvershootInterpolator(2f));
         sy.setInterpolator(new OvershootInterpolator(2f));
-        new AnimatorSet() {{ playTogether(sx, sy); start(); }};
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(sx, sy);
+        set.start();
     }
 
     private void animateAddToCart(View v) {
@@ -158,7 +160,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, "scaleY", 1f, 0.92f, 1f);
         scaleX.setDuration(250);
         scaleY.setDuration(250);
-        new AnimatorSet() {{ playTogether(scaleX, scaleY); start(); }};
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(scaleX, scaleY);
+        set.start();
     }
 
     @Override

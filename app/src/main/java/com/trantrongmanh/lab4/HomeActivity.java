@@ -69,14 +69,16 @@ public class HomeActivity extends AppCompatActivity {
         View homeView = getLayoutInflater().inflate(R.layout.fragment_home, container, false);
         container.addView(homeView);
 
-        // Fade + translateY entrance for the whole content
+        // Fade + translateY entrance
         homeView.setAlpha(0f);
         homeView.setTranslationY(30f);
-        ObjectAnimator fadeIn = ObjectAnimator.ofFloat(homeView, "alpha", 0f, 1f);
+        ObjectAnimator fadeIn  = ObjectAnimator.ofFloat(homeView, "alpha", 0f, 1f);
         ObjectAnimator slideUp = ObjectAnimator.ofFloat(homeView, "translationY", 30f, 0f);
         fadeIn.setDuration(400);
         slideUp.setDuration(400);
-        new AnimatorSet() {{ playTogether(fadeIn, slideUp); start(); }};
+        AnimatorSet entranceSet = new AnimatorSet();
+        entranceSet.playTogether(fadeIn, slideUp);
+        entranceSet.start();
 
         // User greeting
         User user = DataManager.getInstance().getCurrentUser();
@@ -89,7 +91,7 @@ public class HomeActivity extends AppCompatActivity {
             openActivity(UserProfileActivity.class);
         });
 
-        // Promo card ripple
+        // Promo cards animation
         animatePromoCards(homeView);
 
         // Categories
@@ -130,43 +132,42 @@ public class HomeActivity extends AppCompatActivity {
         homeView.findViewById(R.id.tv_see_all).setOnClickListener(v ->
                 openActivity(CategoryActivity.class));
 
-        // Re-setup bottom nav
+        // Re-setup bottom nav listener after re-inflate
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_home) { if (currentTab != id) { currentTab = id; inflateHomeContent(); } }
-            else if (id == R.id.nav_categories) { currentTab = id; openActivity(CategoryActivity.class); }
-            else if (id == R.id.nav_cart)        { currentTab = id; openActivity(CartActivity.class); }
-            else if (id == R.id.nav_profile)     { currentTab = id; openActivity(UserProfileActivity.class); }
+            if (id == R.id.nav_home) {
+                if (currentTab != id) { currentTab = id; inflateHomeContent(); }
+            } else if (id == R.id.nav_categories) { currentTab = id; openActivity(CategoryActivity.class); }
+            else if (id == R.id.nav_cart)          { currentTab = id; openActivity(CartActivity.class); }
+            else if (id == R.id.nav_profile)       { currentTab = id; openActivity(UserProfileActivity.class); }
             return true;
         });
     }
 
-    /** Staggered slide-in animation for promo banners */
+    /** Staggered slide-in for promo banners */
     private void animatePromoCards(View homeView) {
         View promo1 = homeView.findViewById(R.id.card_promo1);
         View promo2 = homeView.findViewById(R.id.card_promo2);
         if (promo1 == null || promo2 == null) return;
 
-        for (View v : new View[]{promo1, promo2}) {
-            v.setAlpha(0f);
-            v.setTranslationX(80f);
-        }
+        promo1.setAlpha(0f); promo1.setTranslationX(80f);
+        promo2.setAlpha(0f); promo2.setTranslationX(80f);
+
         ObjectAnimator p1Fade  = ObjectAnimator.ofFloat(promo1, "alpha", 0f, 1f);
         ObjectAnimator p1Slide = ObjectAnimator.ofFloat(promo1, "translationX", 80f, 0f);
         ObjectAnimator p2Fade  = ObjectAnimator.ofFloat(promo2, "alpha", 0f, 1f);
         ObjectAnimator p2Slide = ObjectAnimator.ofFloat(promo2, "translationX", 80f, 0f);
 
-        for (ObjectAnimator a : new ObjectAnimator[]{p1Fade, p1Slide}) {
-            a.setDuration(500);
-            a.setStartDelay(200);
-            a.setInterpolator(new OvershootInterpolator(0.8f));
-        }
-        for (ObjectAnimator a : new ObjectAnimator[]{p2Fade, p2Slide}) {
-            a.setDuration(500);
-            a.setStartDelay(350);
-            a.setInterpolator(new OvershootInterpolator(0.8f));
-        }
-        new AnimatorSet() {{ playTogether(p1Fade, p1Slide, p2Fade, p2Slide); start(); }};
+        p1Fade.setDuration(500);  p1Slide.setDuration(500);
+        p2Fade.setDuration(500);  p2Slide.setDuration(500);
+        p1Fade.setStartDelay(200);  p1Slide.setStartDelay(200);
+        p2Fade.setStartDelay(350);  p2Slide.setStartDelay(350);
+        p1Slide.setInterpolator(new OvershootInterpolator(0.8f));
+        p2Slide.setInterpolator(new OvershootInterpolator(0.8f));
+
+        AnimatorSet promoSet = new AnimatorSet();
+        promoSet.playTogether(p1Fade, p1Slide, p2Fade, p2Slide);
+        promoSet.start();
     }
 
     private void animateScaleBounce(View v) {
@@ -176,16 +177,19 @@ public class HomeActivity extends AppCompatActivity {
         sy.setDuration(300);
         sx.setInterpolator(new OvershootInterpolator(2f));
         sy.setInterpolator(new OvershootInterpolator(2f));
-        new AnimatorSet() {{ playTogether(sx, sy); start(); }};
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(sx, sy);
+        set.start();
     }
 
     private void setupBottomNav() {
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_home) { if (currentTab != id) { currentTab = id; inflateHomeContent(); } }
-            else if (id == R.id.nav_categories) { currentTab = id; openActivity(CategoryActivity.class); }
-            else if (id == R.id.nav_cart)        { currentTab = id; openActivity(CartActivity.class); }
-            else if (id == R.id.nav_profile)     { currentTab = id; openActivity(UserProfileActivity.class); }
+            if (id == R.id.nav_home) {
+                if (currentTab != id) { currentTab = id; inflateHomeContent(); }
+            } else if (id == R.id.nav_categories) { currentTab = id; openActivity(CategoryActivity.class); }
+            else if (id == R.id.nav_cart)          { currentTab = id; openActivity(CartActivity.class); }
+            else if (id == R.id.nav_profile)       { currentTab = id; openActivity(UserProfileActivity.class); }
             return true;
         });
     }
@@ -238,7 +242,8 @@ public class HomeActivity extends AppCompatActivity {
     private void showAboutDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Giới thiệu 🍔")
-                .setMessage("Food App v1.0\n\nXây dựng bởi: Trần Trọng Mạnh\nMôn: Lập trình ứng dụng di động\nLab 4 — 2026")
+                .setMessage("Food App v1.0\n\nXây dựng bởi: Trần Trọng Mạnh\n" +
+                        "Môn: Lập trình ứng dụng di động\nLab 4 — 2026")
                 .setPositiveButton("Đóng", null)
                 .show();
     }

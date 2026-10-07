@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Rice roll -->
+    <path android:fillColor="#333333"
+        android:pathData="M10,16 L38,16 L38,32 Q24,36 10,32 Z"/>
+    <!-- Rice -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M12,18 L36,18 L36,30 Q24,33 12,30 Z"/>
+    <!-- Salmon topping -->
+    <path android:fillColor="#FF8A65"
+        android:pathData="M14,18 L34,18 L34,22 Q24,24 14,22 Z"/>
+    <!-- Seaweed band -->
+    <path android:fillColor="#1B5E20"
+        android:pathData="M10,23 L38,23 L38,25 L10,25 Z"/>
+</vector>

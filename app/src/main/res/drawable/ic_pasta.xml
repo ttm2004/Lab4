@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Bowl outer -->
+    <path android:fillColor="#BCAAA4"
+        android:pathData="M8,28 Q8,42 24,42 Q40,42 40,28 Z"/>
+    <!-- Pasta wave 1 -->
+    <path android:fillColor="#FFD54F" android:strokeColor="#FFB300" android:strokeWidth="1.5"
+        android:pathData="M12,28 Q16,22 20,28 Q24,34 28,28 Q32,22 36,28"/>
+    <!-- Pasta wave 2 -->
+    <path android:fillColor="#FFD54F" android:strokeColor="#FFB300" android:strokeWidth="1.5"
+        android:pathData="M10,32 Q15,26 20,32 Q25,38 30,32 Q35,26 40,32"/>
+    <!-- Tomato sauce dot 1 (arc circle) -->
+    <path android:fillColor="#EF5350"
+        android:pathData="M20,26 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"/>
+    <!-- Tomato sauce dot 2 (arc circle) -->
+    <path android:fillColor="#EF5350"
+        android:pathData="M28,30 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"/>
+    <!-- Bowl rim -->
+    <path android:fillColor="#D7CCC8"
+        android:pathData="M6,26 Q6,24 24,24 Q42,24 42,26 Q42,28 24,28 Q6,28 6,26 Z"/>
+</vector>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#FFF3E0"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Glass body -->
+    <path android:fillColor="#E3F2FD" android:fillAlpha="0.8"
+        android:pathData="M65,30 L75,120 L125,120 L135,30 Z"/>
+    <!-- Orange juice fill -->
+    <path android:fillColor="#FF9800"
+        android:pathData="M68,55 L73,120 L127,120 L132,55 Z"/>
+    <!-- Glass shine left -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.4"
+        android:pathData="M65,30 L72,30 L80,120 L75,120 Z"/>
+    <!-- Ice cube 1 -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.7"
+        android:pathData="M80,65 L95,65 L95,80 L80,80 Z"/>
+    <!-- Ice cube 2 -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.7"
+        android:pathData="M100,72 L115,72 L115,87 L100,87 Z"/>
+    <!-- Orange slice outer (circle via arc path) -->
+    <path android:fillColor="#FF9800"
+        android:pathData="M130,17 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0"/>
+    <!-- Orange slice inner -->
+    <path android:fillColor="#FFB74D"
+        android:pathData="M130,21 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"/>
+    <!-- Slice segments -->
+    <path android:fillColor="#FF6D00"
+        android:pathData="M130,7 L130,21 M130,21 L144,21 M130,21 L136,32"/>
+    <!-- Straw -->
+    <path android:fillColor="#FF5722" android:strokeColor="#FF5722" android:strokeWidth="4"
+        android:pathData="M110,20 L118,120"/>
+</vector>

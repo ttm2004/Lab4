@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- Decorative circles -->
+    <View android:layout_width="260dp" android:layout_height="260dp"
+        android:background="@drawable/bg_circle_white" android:alpha="0.06"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-80dp" android:layout_marginEnd="-80dp"/>
+
+    <View android:layout_width="160dp" android:layout_height="160dp"
+        android:background="@drawable/bg_circle_white" android:alpha="0.06"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-50dp" android:layout_marginStart="-50dp"/>
+
+    <!-- Center content -->
+    <LinearLayout
+        android:id="@+id/layout_splash_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_version">
+
+        <TextView
+            android:id="@+id/tv_splash_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:text="🍔"
+            android:textSize="64sp"
+            android:background="@drawable/bg_circle_white"
+            android:alpha="0.95"/>
+
+        <TextView
+            android:id="@+id/tv_splash_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food App"
+            android:textColor="@color/text_white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_splash_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngon • Nhanh • Tiện lợi"
+            android:textColor="#CCFFFFFF"
+            android:textSize="15sp"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.0"
+        android:textColor="#80FFFFFF"
+        android:textSize="12sp"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Food App</string>
+
+    <!-- Login -->
+    <string name="login_title">Chào mừng trở lại!</string>
+    <string name="login_subtitle">Đăng nhập để tiếp tục</string>
+    <string name="hint_username">Tên đăng nhập</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="login_error">Tên đăng nhập hoặc mật khẩu không đúng</string>
+    <string name="login_empty">Vui lòng nhập đầy đủ thông tin</string>
+
+    <!-- Home / Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_categories">Danh mục</string>
+    <string name="nav_cart">Giỏ hàng</string>
+    <string name="nav_profile">Hồ sơ</string>
+
+    <!-- Categories -->
+    <string name="category_title">Danh mục món ăn</string>
+    <string name="add_category">Thêm danh mục</string>
+    <string name="edit_category">Sửa danh mục</string>
+    <string name="delete_category">Xóa danh mục</string>
+    <string name="category_name">Tên danh mục</string>
+    <string name="category_desc">Mô tả</string>
+    <string name="delete_confirm">Bạn có chắc muốn xóa không?</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+    <string name="items_count">%d món</string>
+
+    <!-- Food Detail -->
+    <string name="add_to_cart">Thêm vào giỏ</string>
+    <string name="prep_time">%d phút</string>
+    <string name="rating">Đánh giá</string>
+    <string name="description">Mô tả</string>
+
+    <!-- Cart -->
+    <string name="cart_title">Giỏ hàng</string>
+    <string name="cart_empty">Giỏ hàng trống</string>
+    <string name="cart_total">Tổng cộng</string>
+    <string name="checkout">Đặt hàng</string>
+    <string name="order_success">Đặt hàng thành công! 🎉</string>
+    <string name="clear_cart">Xóa giỏ hàng</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Hồ sơ cá nhân</string>
+    <string name="edit_profile">Chỉnh sửa</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="email">Email</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
+
+    <!-- Options Menu -->
+    <string name="menu_search">Tìm kiếm</string>
+    <string name="menu_sort">Sắp xếp</string>
+    <string name="menu_filter">Lọc</string>
+    <string name="menu_refresh">Làm mới</string>
+    <string name="menu_about">Giới thiệu</string>
+    <string name="menu_settings">Cài đặt</string>
+    <string name="menu_sort_name">Theo tên</string>
+    <string name="menu_sort_price">Theo giá</string>
+    <string name="menu_sort_rating">Theo đánh giá</string>
+
+    <!-- Context Menu -->
+    <string name="context_view">Xem chi tiết</string>
+    <string name="context_edit">Chỉnh sửa</string>
+    <string name="context_delete">Xóa</string>
+    <string name="context_add_cart">Thêm vào giỏ</string>
+    <string name="context_favorite">Yêu thích</string>
+
+    <!-- General -->
+    <string name="search_hint">Tìm kiếm món ăn...</string>
+    <string name="price_format">%,.0f đ</string>
+    <string name="added_to_cart">Đã thêm vào giỏ hàng</string>
+    <string name="removed_from_cart">Đã xóa khỏi giỏ hàng</string>
+</resources>

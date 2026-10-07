@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#F1F8E9" android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <path android:fillColor="#212121" android:pathData="M20,55 L180,55 L180,100 Q100,108 20,100 Z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M22,57 L178,57 L178,98 Q100,105 22,98 Z"/>
+    <!-- Avocado topping (dragon) -->
+    <path android:fillColor="#8BC34A" android:pathData="M22,57 Q60,50 100,57 Q140,64 178,57 L178,68 Q140,76 100,69 Q60,62 22,69 Z"/>
+    <path android:fillColor="#1B5E20" android:pathData="M22,76 L178,76 L178,79 L22,79 Z"/>
+    <!-- Shrimp tail peeking out -->
+    <path android:fillColor="#FF8A65" android:pathData="M160,50 Q175,42 178,52 Q172,55 160,55 Z"/>
+</vector>

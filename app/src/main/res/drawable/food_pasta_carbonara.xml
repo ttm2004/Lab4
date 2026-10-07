@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#FFF8E1"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Bowl outer -->
+    <path android:fillColor="#D7CCC8"
+        android:pathData="M40,60 Q40,130 100,130 Q160,130 160,60 Z"/>
+    <!-- Bowl rim -->
+    <path android:fillColor="#EFEBE9"
+        android:pathData="M38,56 Q38,54 100,54 Q162,54 162,58 Q162,62 100,62 Q38,62 38,58 Z"/>
+    <!-- Pasta strands row 1 -->
+    <path android:fillColor="#FFD54F" android:strokeColor="#FFB300" android:strokeWidth="2"
+        android:pathData="M50,62 Q60,72 70,62 Q80,52 90,62 Q100,72 110,62 Q120,52 130,62 Q140,72 150,62"/>
+    <!-- Pasta strands row 2 -->
+    <path android:fillColor="#FFD54F" android:strokeColor="#FFB300" android:strokeWidth="2"
+        android:pathData="M45,74 Q58,84 71,74 Q84,64 97,74 Q110,84 123,74 Q136,64 149,74"/>
+    <!-- Pasta strands row 3 -->
+    <path android:fillColor="#FFD54F" android:strokeColor="#FFB300" android:strokeWidth="2"
+        android:pathData="M50,86 Q63,96 76,86 Q89,76 102,86 Q115,96 128,86 Q141,76 154,86"/>
+    <!-- Bacon piece 1 -->
+    <path android:fillColor="#795548"
+        android:pathData="M70,68 L90,68 L92,74 L72,74 Z"/>
+    <!-- Bacon piece 2 -->
+    <path android:fillColor="#795548"
+        android:pathData="M110,76 L130,76 L132,82 L112,82 Z"/>
+    <!-- Parmesan flake -->
+    <path android:fillColor="#FFFDE7" android:fillAlpha="0.8"
+        android:pathData="M85,58 L95,58 L97,62 L87,62 Z"/>
+    <!-- Egg yolk dot (arc-based circle) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M100,68 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+</vector>

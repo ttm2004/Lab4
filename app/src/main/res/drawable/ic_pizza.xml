@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Pizza base (crust) -->
+    <path android:fillColor="#FFB74D"
+        android:pathData="M24,6 L6,40 L42,40 Z"/>
+    <!-- Tomato sauce -->
+    <path android:fillColor="#EF5350"
+        android:pathData="M24,10 L9,38 L39,38 Z"/>
+    <!-- Cheese -->
+    <path android:fillColor="#FFF176"
+        android:pathData="M24,14 L12,36 L36,36 Z"/>
+    <!-- Topping dot 1 (arc circle) -->
+    <path android:fillColor="#C62828"
+        android:pathData="M24,22 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"/>
+    <!-- Topping dot 2 (arc circle) -->
+    <path android:fillColor="#C62828"
+        android:pathData="M18,28 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"/>
+    <!-- Topping dot 3 (arc circle) -->
+    <path android:fillColor="#C62828"
+        android:pathData="M30,28 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"/>
+    <!-- Crust tip -->
+    <path android:fillColor="#FF8F00"
+        android:pathData="M24,6 L22,8 L26,8 Z"/>
+</vector>

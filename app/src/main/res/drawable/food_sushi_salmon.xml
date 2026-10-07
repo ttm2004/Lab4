@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#E8F5E9"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Sushi piece 1 -->
+    <path android:fillColor="#212121"
+        android:pathData="M30,55 L70,55 L70,95 Q50,100 30,95 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M32,57 L68,57 L68,93 Q50,97 32,93 Z"/>
+    <path android:fillColor="#FF8A65"
+        android:pathData="M32,57 L68,57 L68,68 Q50,70 32,68 Z"/>
+    <!-- Sushi piece 2 -->
+    <path android:fillColor="#212121"
+        android:pathData="M80,55 L120,55 L120,95 Q100,100 80,95 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M82,57 L118,57 L118,93 Q100,97 82,93 Z"/>
+    <path android:fillColor="#FF8A65"
+        android:pathData="M82,57 L118,57 L118,68 Q100,70 82,68 Z"/>
+    <!-- Sushi piece 3 -->
+    <path android:fillColor="#212121"
+        android:pathData="M130,55 L170,55 L170,95 Q150,100 130,95 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M132,57 L168,57 L168,93 Q150,97 132,93 Z"/>
+    <path android:fillColor="#FF8A65"
+        android:pathData="M132,57 L168,57 L168,68 Q150,70 132,68 Z"/>
+    <!-- Wasabi (arc circle) -->
+    <path android:fillColor="#66BB6A"
+        android:pathData="M50,100 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/>
+    <!-- Ginger -->
+    <path android:fillColor="#FFCDD2"
+        android:pathData="M140,104 Q155,100 165,108 Q158,116 145,114 Z"/>
+</vector>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#FFF3E0"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Crust -->
+    <path android:fillColor="#FF8F00"
+        android:pathData="M100,15 m-60,0 a60,60 0 1,0 120,0 a60,60 0 1,0 -120,0"/>
+    <!-- Sauce -->
+    <path android:fillColor="#D32F2F"
+        android:pathData="M100,23 m-52,0 a52,52 0 1,0 104,0 a52,52 0 1,0 -104,0"/>
+    <!-- Cheese -->
+    <path android:fillColor="#FFF176"
+        android:pathData="M100,31 m-44,0 a44,44 0 1,0 88,0 a44,44 0 1,0 -88,0"/>
+    <!-- Pepperoni 1 -->
+    <path android:fillColor="#B71C1C"
+        android:pathData="M82,57 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0"/>
+    <!-- Pepperoni 2 -->
+    <path android:fillColor="#B71C1C"
+        android:pathData="M106,61 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0"/>
+    <!-- Pepperoni 3 -->
+    <path android:fillColor="#B71C1C"
+        android:pathData="M94,80 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0"/>
+    <!-- Pepperoni 4 -->
+    <path android:fillColor="#B71C1C"
+        android:pathData="M76,76 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0"/>
+    <!-- Pepperoni 5 -->
+    <path android:fillColor="#B71C1C"
+        android:pathData="M112,76 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0"/>
+</vector>

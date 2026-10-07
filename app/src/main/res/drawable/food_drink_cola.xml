@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#E8EAF6"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Can body -->
+    <path android:fillColor="#D32F2F"
+        android:pathData="M70,30 L130,30 L130,120 Q100,125 70,120 Z"/>
+    <!-- Can highlight -->
+    <path android:fillColor="#EF5350"
+        android:pathData="M70,30 L85,30 L85,120 Q77,123 70,120 Z"/>
+    <!-- Label background -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.9"
+        android:pathData="M75,65 Q100,60 125,65 L125,85 Q100,90 75,85 Z"/>
+    <!-- Coca-Cola wave on label -->
+    <path android:fillColor="#D32F2F"
+        android:pathData="M78,72 Q88,68 98,72 Q108,76 118,72 L118,78 Q108,82 98,78 Q88,74 78,78 Z"/>
+    <!-- Can top rim -->
+    <path android:fillColor="#BDBDBD"
+        android:pathData="M68,24 Q68,20 100,20 Q132,20 132,24 Q132,30 100,30 Q68,30 68,24 Z"/>
+    <!-- Ring pull -->
+    <path android:fillColor="#9E9E9E"
+        android:pathData="M96,22 L104,22 L106,28 L94,28 Z"/>
+    <!-- Can bottom rim -->
+    <path android:fillColor="#BDBDBD"
+        android:pathData="M70,118 Q70,126 100,126 Q130,126 130,118 Z"/>
+</vector>

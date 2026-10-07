@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#E3F2FD"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Roll outer -->
+    <path android:fillColor="#212121"
+        android:pathData="M30,50 L170,50 L170,100 Q100,108 30,100 Z"/>
+    <!-- Rice layer -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M32,52 L168,52 L168,98 Q100,105 32,98 Z"/>
+    <!-- Tuna topping -->
+    <path android:fillColor="#EF9A9A"
+        android:pathData="M32,52 L168,52 L168,65 Q100,68 32,65 Z"/>
+    <!-- Seaweed band -->
+    <path android:fillColor="#1B5E20"
+        android:pathData="M32,75 L168,75 L168,78 L32,78 Z"/>
+    <!-- Wasabi (arc circle) -->
+    <path android:fillColor="#66BB6A"
+        android:pathData="M40,107 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/>
+</vector>

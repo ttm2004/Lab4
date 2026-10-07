@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Cake base -->
+    <path android:fillColor="#F8BBD0"
+        android:pathData="M8,30 L8,40 L40,40 L40,30 Z"/>
+    <!-- Cake middle -->
+    <path android:fillColor="#FCE4EC"
+        android:pathData="M10,22 L10,30 L38,30 L38,22 Z"/>
+    <!-- Frosting top -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M10,20 Q14,16 18,20 Q22,24 26,20 Q30,16 34,20 Q38,24 38,20 L38,22 L10,22 Z"/>
+    <!-- Candle -->
+    <path android:fillColor="#FF8A65"
+        android:pathData="M22,12 L22,20 L26,20 L26,12 Z"/>
+    <!-- Flame -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M24,8 Q27,10 26,12 Q24,11 22,12 Q21,10 24,8 Z"/>
+    <!-- Stripes -->
+    <path android:fillColor="#F48FB1"
+        android:pathData="M8,32 L40,32 L40,34 L8,34 Z"/>
+</vector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <path android:fillColor="#FBE9E7"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Bowl outer -->
+    <path android:fillColor="#BCAAA4"
+        android:pathData="M40,58 Q40,128 100,128 Q160,128 160,58 Z"/>
+    <!-- Bowl rim -->
+    <path android:fillColor="#D7CCC8"
+        android:pathData="M38,54 Q38,52 100,52 Q162,52 162,56 Q162,60 100,60 Q38,60 38,56 Z"/>
+    <!-- Penne tubes (parallelogram shapes) -->
+    <path android:fillColor="#FFB74D" android:pathData="M56,68 L66,68 L70,82 L60,82 Z"/>
+    <path android:fillColor="#FFA726" android:pathData="M56,68 L60,68 L64,82 L60,82 Z"/>
+    <path android:fillColor="#FFB74D" android:pathData="M75,72 L85,72 L89,86 L79,86 Z"/>
+    <path android:fillColor="#FFA726" android:pathData="M75,72 L79,72 L83,86 L79,86 Z"/>
+    <path android:fillColor="#FFB74D" android:pathData="M95,66 L105,66 L109,80 L99,80 Z"/>
+    <path android:fillColor="#FFB74D" android:pathData="M115,74 L125,74 L129,88 L119,88 Z"/>
+    <path android:fillColor="#FFB74D" android:pathData="M60,90 L70,90 L74,104 L64,104 Z"/>
+    <path android:fillColor="#FFB74D" android:pathData="M100,92 L110,92 L114,106 L104,106 Z"/>
+    <!-- Tomato sauce dots (arc circles) -->
+    <path android:fillColor="#EF5350"
+        android:pathData="M85,73 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <path android:fillColor="#EF5350"
+        android:pathData="M120,61 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#EF5350"
+        android:pathData="M80,93 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <!-- Basil leaf -->
+    <path android:fillColor="#4CAF50"
+        android:pathData="M130,85 Q138,80 140,88 Q134,92 130,85 Z"/>
+</vector>

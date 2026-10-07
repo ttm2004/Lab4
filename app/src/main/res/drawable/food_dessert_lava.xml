@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportWidth="200"
+    android:viewportHeight="150">
+    <!-- Background -->
+    <path android:fillColor="#EFEBE9"
+        android:pathData="M0,0 L200,0 L200,150 L0,150 Z"/>
+    <!-- Plate outer ring -->
+    <path android:fillColor="#EEEEEE"
+        android:pathData="M100,45 m-65,0 a65,65 0 1,0 130,0 a65,65 0 1,0 -130,0"/>
+    <!-- Plate inner -->
+    <path android:fillColor="#FAFAFA"
+        android:pathData="M100,50 m-58,0 a58,58 0 1,0 116,0 a58,58 0 1,0 -116,0"/>
+    <!-- Cake body top circle -->
+    <path android:fillColor="#4E342E"
+        android:pathData="M100,23 m-35,0 a35,35 0 1,0 70,0 a35,35 0 1,0 -70,0"/>
+    <!-- Cake body lower fill -->
+    <path android:fillColor="#3E2723"
+        android:pathData="M65,58 Q65,110 100,110 Q135,110 135,58 Z"/>
+    <!-- Lava flow outer -->
+    <path android:fillColor="#FF6D00"
+        android:pathData="M95,58 Q98,70 95,80 Q93,90 97,100 Q100,105 103,100 Q107,90 105,80 Q102,70 105,58 Q100,55 95,58 Z"/>
+    <!-- Lava highlight -->
+    <path android:fillColor="#FFC107" android:fillAlpha="0.7"
+        android:pathData="M98,58 Q100,68 98,76 Q97,84 100,92 Q101,88 103,80 Q105,72 102,62 Q100,56 98,58 Z"/>
+    <!-- Powdered sugar dots -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.6"
+        android:pathData="M75,48 L78,52 L72,52 Z M90,44 L93,48 L87,48 Z M110,46 L113,50 L107,50 Z M120,52 L123,56 L117,56 Z"/>
+    <!-- Vanilla ice cream scoop -->
+    <path android:fillColor="#FFF8E1"
+        android:pathData="M145,67 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0"/>
+    <!-- Ice cream inner -->
+    <path android:fillColor="#FFECB3"
+        android:pathData="M145,71 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"/>
+</vector>
